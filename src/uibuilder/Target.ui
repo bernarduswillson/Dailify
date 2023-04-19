@@ -34,9 +34,9 @@
   <widget class="QScrollArea" name="TargetScroll">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>-20</x>
      <y>71</y>
-     <width>1920</width>
+     <width>1941</width>
      <height>951</height>
     </rect>
    </property>
@@ -89,7 +89,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>10</y>
+       <y>-70</y>
        <width>2034</width>
        <height>1001</height>
       </rect>
@@ -282,7 +282,7 @@ color: rgb(129, 129, 129)
 </string>
           </property>
           <property name="placeholderText">
-           <string>2022...</string>
+           <string>Year...</string>
           </property>
          </widget>
         </item>

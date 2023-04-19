@@ -52,7 +52,7 @@ class TargetPage(QWidget):
         self.ReachedList.setAlignment(Qt.AlignTop)
         self.TargetList.setAlignment(Qt.AlignTop)
         self.TargetLayout.setAlignment(self.NewTargetButton, Qt.AlignCenter)
-        self.TargetScroll.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
+        # self.TargetScroll.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
         
         self.ListOfTarget = []
         self.statusInput = 0
@@ -66,8 +66,12 @@ class TargetPage(QWidget):
         for target in targets:
             if target[3] == 0:
                 self.addTarget(str(target[1]), str(target[2]))
+                height = self.TargetScrollWidget.height() + 84
+                self.TargetScrollWidget.setFixedHeight(height)
             elif target[3] == 1:
                 self.addReachedTarget(str(target[1]), str(target[2]))
+                height = self.TargetScrollWidget.height() + 84
+                self.TargetScrollWidget.setFixedHeight(height)
 
     # Hide or Show input target (NewTargetLayout)
     def statusInputTargetLayout(self):
@@ -133,15 +137,19 @@ class TargetPage(QWidget):
         
     # Save Target Button Clicked
     def saveTargetClicked(self):
-        self.statusInput = 0
-        self.addTarget(self.InputNewTarget.text(), self.InputYearTarget.text())
-        self.statusInputTargetLayout()
+        # Target cannot be empty
+        if self.InputNewTarget.text() == '':
+            return
+        else:
+            self.statusInput = 0
+            self.addTarget(self.InputNewTarget.text(), self.InputYearTarget.text())
+            self.statusInputTargetLayout()
 
-        # Dynamicaly increase scroll area widget height to adjust scroll bar value
-        height = self.TargetScrollWidget.height() + 90
-        self.TargetScrollWidget.setFixedHeight(height)
+            # Dynamicaly increase scroll area widget height to adjust scroll bar value
+            height = self.TargetScrollWidget.height() + 84
+            self.TargetScrollWidget.setFixedHeight(height)
 
-        TargetManager.insertTargetDB(self.InputNewTarget.text(), self.InputYearTarget.text())
+            TargetManager.insertTargetDB(self.InputNewTarget.text(), self.InputYearTarget.text())
 
         
     # New Target Button Clicked
