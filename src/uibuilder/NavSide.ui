@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NavSide</class>
+ <widget class="QWidget" name="NavSide">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>310</width>
+    <height>1024</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+background-color: rgb(41,41,41)
+}</string>
+  </property>
+  <widget class="QPushButton" name="DashboardBtn">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>115</y>
+     <width>310</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat Medium</family>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	color:rgb(190,190,190);
+	border: none;
+	padding-left: 20px;
+	 text-align: left;
+}
+QPushButton:hover {
+        background-color: rgb(51,51,51);
+ }</string>
+   </property>
+   <property name="text">
+    <string>Dashboard</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ProfileBtn">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>197</y>
+     <width>310</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat Medium</family>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	color:rgb(190,190,190);
+	border: none;
+	padding-left: 20px;
+	text-align: left;
+}
+QPushButton:hover {
+        background-color: rgb(51,51,51);
+ }</string>
+   </property>
+   <property name="text">
+    <string>Profile</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="TargetBtn">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>156</y>
+     <width>310</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat Medium</family>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	color:rgb(190,190,190);
+	border: none;
+	padding-left: 20px;
+	text-align: left;
+}
+QPushButton:hover {
+        background-color: rgb(51,51,51);
+ }</string>
+   </property>
+   <property name="text">
+    <string>Target</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QFrame" name="NavSideFrame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>310</width>
+     <height>1024</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>NavSideFrame</zorder>
+  <zorder>DashboardBtn</zorder>
+  <zorder>ProfileBtn</zorder>
+  <zorder>TargetBtn</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
